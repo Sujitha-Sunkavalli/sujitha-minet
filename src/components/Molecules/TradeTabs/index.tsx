@@ -1,6 +1,5 @@
 import { Card } from "@material-ui/core";
 import React from "react"
-import trades from "./data"
 import { makeStyles } from "@material-ui/core";
 import {TableRow,TableHead,TableCell} from "@material-ui/core"
 import { Typography } from "@mui/material";
