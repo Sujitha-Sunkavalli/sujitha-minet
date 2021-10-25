@@ -13,12 +13,14 @@ export default  {
 
 
 
-const Template: ComponentStory<typeof ButtonComponent> = (args) => <ThemeProvider theme={theme}> <ButtonComponent {...args} /></ThemeProvider>;
+const Template: ComponentStory<typeof ButtonComponent> = (args) => <ThemeProvider theme={theme}> 
+<ButtonComponent {...args} /></ThemeProvider>;
 
 export const Primary = Template.bind({});
 Primary.args = {
 variant:"contained",
 children:"SELL",
+
 
 };
 
