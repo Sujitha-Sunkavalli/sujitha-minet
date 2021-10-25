@@ -1,5 +1,7 @@
 import TradeTab from './index'
 import { ComponentStory, ComponentMeta } from '@storybook/react';
+import { ThemeProvider } from "@material-ui/core/styles";
+import {theme} from "../../../themes/index";
 type TradeType = {
     price: string;
     name: string;
@@ -16,7 +18,7 @@ export default  {
     },
   } as ComponentMeta<typeof TradeTab>;
 
- const Templates: ComponentStory<typeof TradeTab> = (args:TradeType) => <TradeTab  {...args} />;
+ const Templates: ComponentStory<typeof TradeTab> = (args:TradeType) =><ThemeProvider theme={theme}><TradeTab  {...args} /></ThemeProvider> ;
   
   export const Tradetabs = Templates.bind({});
   Tradetabs.args={

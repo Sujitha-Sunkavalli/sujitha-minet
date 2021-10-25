@@ -1,7 +1,8 @@
 import {ImageButton} from '.'
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 import { ExpandMore } from '@mui/icons-material';
-
+import { ThemeProvider } from "@material-ui/core/styles";
+import {theme} from "../../../themes/index";
 export default  {
     title: 'Trading/Molecules/ImageButton',
     component: ImageButton,
@@ -12,7 +13,7 @@ export default  {
 
 
 
-const Template: ComponentStory<typeof ImageButton> = (args) => <ImageButton {...args} />;
+const Template: ComponentStory<typeof ImageButton> = (args) =><ThemeProvider theme={theme}><ImageButton {...args} /></ThemeProvider>;
 
 export const Account = Template.bind({});
 Account.args = {

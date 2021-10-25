@@ -1,5 +1,7 @@
 import CardDetail from './index'
 import { ComponentStory, ComponentMeta } from '@storybook/react';
+import { ThemeProvider } from "@material-ui/core/styles";
+import {theme} from "../../../themes/index";
 type TradeType = {
     price: string;
     name: string;
@@ -16,7 +18,7 @@ export default  {
     },
   } as ComponentMeta<typeof CardDetail>;
 
- const Templates: ComponentStory<typeof CardDetail> = (args:TradeType) => <CardDetail  {...args} />;
+ const Templates: ComponentStory<typeof CardDetail> = (args:TradeType) =>  <ThemeProvider theme={theme}><CardDetail  {...args} /></ThemeProvider>;
   
   export const CardTab = Templates.bind({});
   CardTab.args={
